@@ -1,0 +1,8 @@
+[build]
+  functions = "netlify/functions" # Direktori tempat fungsi Netlify Anda berada
+  publish = "." # Direktori yang akan di-deploy sebagai situs statis (root proyek)
+
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
