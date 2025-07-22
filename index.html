@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Proposal Otomatis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Generator Proposal Otomatis</h1>
+            <p>Isi formulir di bawah ini untuk membuat proposal Anda secara instan.</p>
+        </header>
+
+        <form id="proposalForm">
+            <section class="form-section">
+                <h2>Informasi Umum Proposal</h2>
+                <div class="form-group">
+                    <label for="judulProposal">Judul Proposal <span class="required">*</span></label>
+                    <input type="text" id="judulProposal" name="judulProposal" required placeholder="Contoh: Proposal Proyek Pengembangan Aplikasi Web">
+                </div>
+                <div class="form-group">
+                    <label for="namaKlien">Nama Klien/Perusahaan Tujuan <span class="required">*</span></label>
+                    <input type="text" id="namaKlien" name="namaKlien" required placeholder="Contoh: PT. Inovasi Digital">
+                </div>
+                <div class="form-group">
+                    <label for="tanggalProposal">Tanggal Proposal <span class="required">*</span></label>
+                    <input type="date" id="tanggalProposal" name="tanggalProposal" required>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Ringkasan Eksekutif</h2>
+                <div class="form-group">
+                    <label for="ringkasanEksekutif">Tulis ringkasan eksekutif Anda (maks. 500 kata) <span class="required">*</span></label>
+                    <textarea id="ringkasanEksekutif" name="ringkasanEksekutif" rows="10" required placeholder="Sajikan gambaran singkat dan menarik tentang proposal Anda..."></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Profil Perusahaan Anda</h2>
+                <div class="form-group">
+                    <label for="namaPerusahaanAnda">Nama Perusahaan Anda <span class="required">*</span></label>
+                    <input type="text" id="namaPerusahaanAnda" name="namaPerusahaanAnda" required placeholder="Contoh: Solusi Kreatif IT">
+                </div>
+                <div class="form-group">
+                    <label for="alamatPerusahaanAnda">Alamat Perusahaan</label>
+                    <input type="text" id="alamatPerusahaanAnda" name="alamatPerusahaanAnda" placeholder="Contoh: Jl. Merdeka No. 10, Jakarta">
+                </div>
+                <div class="form-group">
+                    <label for="teleponPerusahaanAnda">Telepon Perusahaan</label>
+                    <input type="tel" id="teleponPerusahaanAnda" name="teleponPerusahaanAnda" placeholder="Contoh: +62 812 3456 7890">
+                </div>
+                <div class="form-group">
+                    <label for="emailPerusahaanAnda">Email Perusahaan <span class="required">*</span></label>
+                    <input type="email" id="emailPerusahaanAnda" name="emailPerusahaanAnda" required placeholder="info@perusahaananda.com">
+                </div>
+                <div class="form-group">
+                    <label for="visiPerusahaan">Visi Perusahaan</label>
+                    <input type="text" id="visiPerusahaan" name="visiPerusahaan" placeholder="Contoh: Menjadi penyedia solusi IT terkemuka...">
+                </div>
+                <div class="form-group">
+                    <label for="misiPerusahaan">Misi Perusahaan</label>
+                    <textarea id="misiPerusahaan" name="misiPerusahaan" rows="3" placeholder="Contoh: Memberikan layanan berkualitas tinggi..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="deskripsiPerusahaan">Deskripsi Singkat Perusahaan Anda</label>
+                    <textarea id="deskripsiPerusahaan" name="deskripsiPerusahaan" rows="5" placeholder="Jelaskan secara singkat latar belakang dan keunggulan perusahaan Anda..."></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Detail Proyek/Layanan</h2>
+                <div class="form-group">
+                    <label for="masalahKlien">Masalah yang Dihadapi Klien <span class="required">*</span></label>
+                    <textarea id="masalahKlien" name="masalahKlien" rows="5" required placeholder="Jelaskan masalah spesifik yang ingin dipecahkan oleh klien..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="solusiKami">Solusi yang Kami Tawarkan <span class="required">*</span></label>
+                    <textarea id="solusiKami" name="solusiKami" rows="5" required placeholder="Uraikan bagaimana produk atau layanan Anda akan mengatasi masalah tersebut..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="lingkupPekerjaanDeskripsi">Lingkup Pekerjaan</label>
+                    <textarea id="lingkupPekerjaanDeskripsi" name="lingkupPekerjaanDeskripsi" rows="5" placeholder="Detail tugas, deliverables, dan batasan proyek..."></textarea>
+                </div>
+                <div id="deliverablesContainer">
+                    <h3>Deliverables</h3>
+                    <div class="deliverable-item form-group">
+                        <label for="deliverable1">Deliverable 1</label>
+                        <input type="text" id="deliverable1" name="deliverables" placeholder="Contoh: Desain Antarmuka Pengguna">
+                        <button type="button" class="remove-item">Hapus</button>
+                    </div>
+                </div>
+                <button type="button" id="addDeliverable">Tambah Deliverable</button>
+                <div class="form-group">
+                    <label for="jadwalProyekDeskripsi">Jadwal Proyek</label>
+                    <textarea id="jadwalProyekDeskripsi" name="jadwalProyekDeskripsi" rows="3" placeholder="Contoh: Proyek akan diselesaikan dalam 8 minggu..."></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Detail Investasi</h2>
+                <div id="pricingItemsContainer">
+                    <h3>Item Harga</h3>
+                    <div class="pricing-item form-group">
+                        <label for="itemLayanan1">Item/Layanan 1</label>
+                        <input type="text" id="itemLayanan1" name="pricingItems[name]" placeholder="Contoh: Pengembangan Backend">
+                        <label for="deskripsiItem1">Deskripsi</label>
+                        <input type="text" id="deskripsiItem1" name="pricingItems[description]" placeholder="Deskripsi item layanan">
+                        <label for="kuantitas1">Kuantitas</label>
+                        <input type="number" id="kuantitas1" name="pricingItems[qty]" value="1" min="1">
+                        <label for="hargaSatuan1">Harga Satuan</label>
+                        <input type="number" id="hargaSatuan1" name="pricingItems[price]" step="0.01" placeholder="1000000">
+                        <button type="button" class="remove-item">Hapus</button>
+                    </div>
+                </div>
+                <button type="button" id="addPricingItem">Tambah Item Harga</button>
+                <div class="form-group">
+                    <label for="catatanHarga">Catatan Tambahan Mengenai Harga</label>
+                    <textarea id="catatanHarga" name="catatanHarga" rows="3" placeholder="Contoh: Harga belum termasuk PPN 11%"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="totalInvestasi">Total Investasi (Otomatis dihitung atau diisi manual)</label>
+                    <input type="text" id="totalInvestasi" name="totalInvestasi" placeholder="Akan dihitung atau diisi manual">
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Syarat dan Ketentuan</h2>
+                <div class="form-group">
+                    <label for="syaratKetentuan">Syarat dan Ketentuan Proposal</label>
+                    <textarea id="syaratKetentuan" name="syaratKetentuan" rows="8" placeholder="Masukkan syarat dan ketentuan perjanjian di sini..."></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Bukti Sosial / Testimonial</h2>
+                <div class="form-group">
+                    <label for="testimonialKlien">Testimonial Klien</label>
+                    <textarea id="testimonialKlien" name="testimonialKlien" rows="4" placeholder="Masukkan kutipan testimonial dari klien yang puas..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="namaKlienTestimonial">Nama Klien Testimonial</label>
+                    <input type="text" id="namaKlienTestimonial" name="namaKlienTestimonial" placeholder="Contoh: Budi Santoso">
+                </div>
+                <div class="form-group">
+                    <label for="jabatanKlienTestimonial">Jabatan Klien Testimonial</label>
+                    <input type="text" id="jabatanKlienTestimonial" name="jabatanKlienTestimonial" placeholder="Contoh: CEO, PT. Maju Jaya">
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Penutup dan Tanda Tangan</h2>
+                <div class="form-group">
+                    <label for="penutupProposal">Penutup Proposal</label>
+                    <textarea id="penutupProposal" name="penutupProposal" rows="5" placeholder="Tulis pernyataan penutup yang kuat dan ajakan bertindak..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="namaPenanggungJawab">Nama Penanggung Jawab</label>
+                    <input type="text" id="namaPenanggungJawab" name="namaPenanggungJawab" placeholder="Contoh: Siti Aminah">
+                </div>
+                <div class="form-group">
+                    <label for="jabatanPenanggungJawab">Jabatan Penanggung Jawab</label>
+                    <input type="text" id="jabatanPenanggungJawab" name="jabatanPenanggungJawab" placeholder="Contoh: Direktur Utama">
+                </div>
+            </section>
+
+            <button type="submit">Buat Proposal</button>
+        </form>
+
+        <div id="loadingMessage" style="display: none; text-align: center; margin-top: 20px;">
+            <p>Membuat proposal Anda...</p>
+        </div>
+
+        <section id="proposalOutput" style="display: none;">
+            <h2>Proposal Anda</h2>
+            <button id="downloadPdfButton">Unduh sebagai PDF (Cetak)</button>
+            <div id="proposalContent" class="proposal-preview">
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
